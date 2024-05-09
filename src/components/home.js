@@ -3,7 +3,6 @@ import axios from 'axios'
 import { StyledHome } from '../styled/Home.styled'
 
 export function Home() {
-  const [imageUrl, setImageUrl] = useState("");
   let formData;
 
   const handleFileChange = (event) =>{
