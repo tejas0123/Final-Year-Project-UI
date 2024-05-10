@@ -4,18 +4,20 @@ import { StyledHome } from '../styled/Home.styled'
 
 export function Home() {
   let formData;
+  let file;
+  const [imageFileName, setImageFileName] = useState("");
+
+  const BASE_FILE_PATH = "images/";
 
   const handleFileChange = (event) =>{
-    const file = event.target.files[0];
-    formData = new FormData();
-    formData.append("file", file);
+    file = event.target.files[0];
+    console.log(file);
+    console.log(file.name);
+    setImageFileName(file.name);
   }
 
   const fileUpload = (event) => {
-    axios.post("", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },})
+    axios.post("http://192.168.0.108:8000/predictBacteriaClass", {"imageFilePath" : BASE_FILE_PATH + imageFileName})
       .then((response) => {
         console.log(response);
       })
