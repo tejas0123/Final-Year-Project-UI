@@ -8,25 +8,66 @@ export const StyledHome = styled.div`
         font-size: 33px;
         color: #00796b;
     }
+    .mainDiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        
+        .mainImageDiv{
+            background-color: #b2dfdb;
+            padding: 80px;
+            width: 35%;
+            margin-top: 10%;
+            border-radius: 50px;
+            .imageDiv{
+                margin-top: 20px;
+            }
+        
+            img{
+                margin-top: 20px;
+                width: 70%;
+                border-radius: 50%;
+            }
+            .headingsDiv{
+                color: #00796b;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 60px;
+            }
+
+            .imageInputDiv{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .result{
+                margin-top: 20px;
+                color: green;
+            }
+        }
+    }
+    
     .formDiv{
         color: #009688;
         background-color: #b2dfdb;
         padding: 80px;
-        width: 600px;
+        width: 40%;
         margin-top: 10%;
-        margin-left: 30%;
         border-radius: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        
         input{
             margin-left: 20px;
             background-color: #80cbc4;
             padding: 15px;
             border: none;
             border-radius: 25px;
-            color: #fefefe;
+            color: #00796b;
             font-weight: 600;
         }
 
@@ -36,10 +77,8 @@ export const StyledHome = styled.div`
         }
         
         .submitButton{
-            margin-top: 15px;
             padding: 15px;
             text-transform: uppercase;
-            color: #fefefe;
             width: 100px;
         }
         
@@ -47,11 +86,14 @@ export const StyledHome = styled.div`
             cursor: pointer;
             background-color:#26a69a;
             transition: 0.4s;
+            color: white;
         }
     }
+    
     .innerDiv{
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
 `
