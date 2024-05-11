@@ -7,6 +7,7 @@ export function Home() {
   const [imageFileName, setImageFileName] = useState("");
   const [image, setImage] = useState(null);
   const [result, setResult] = useState("");
+  const [resultHeading, setResultHeading] = useState("");
 
   const BASE_FILE_PATH = "images/";
 
@@ -30,7 +31,8 @@ export function Home() {
       .then((response) => {
         console.log(response);
         if (response !== "") {
-          setResult("Bacteria Class: " + (response.data));
+          setResultHeading("Bacteria Class:")
+          setResult((response.data));
         }
       })
       .catch((error) => {
@@ -55,7 +57,7 @@ export function Home() {
           </div>
           <div className='imageInputDiv'>
             <div className='imageDiv'>{image && <img src={image}/>}</div>
-            <div className='result'><h2>{result}</h2></div>
+            <div className='result'><h2>{resultHeading}</h2><p><i>{result}</i></p></div>
           </div>
         </div>
       </div>

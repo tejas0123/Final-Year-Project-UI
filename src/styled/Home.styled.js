@@ -5,7 +5,7 @@ export const StyledHome = styled.div`
         margin-top : 15px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-align: center;
-        font-size: 33px;
+        font-size: 38px;
         color: #00796b;
     }
     .mainDiv{
@@ -45,6 +45,11 @@ export const StyledHome = styled.div`
             .result{
                 margin-top: 20px;
                 color: green;
+                font-size: 25px;
+                
+                p{
+                    margin-top: 10px;
+                }
             }
         }
     }
