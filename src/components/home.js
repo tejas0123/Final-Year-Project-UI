@@ -26,7 +26,7 @@ export function Home() {
   }
 
   const fileUpload = (event) => {
-    axios.post("http://192.168.0.108:8000/predictBacteriaClass", { "imageFilePath": BASE_FILE_PATH + imageFileName })
+    axios.post("http://localhost:8000/predictBacteriaClass", { "imageFilePath": BASE_FILE_PATH + imageFileName })
       .then((response) => {
         console.log(response);
         if (response !== "") {
