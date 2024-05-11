@@ -25,7 +25,7 @@ export function Home() {
       reader.readAsDataURL(event.target.files[0]);
     }
   }
-
+  
   const fileUpload = (event) => {
     axios.post("http://localhost:8000/predictBacteriaClass", { "imageFilePath": BASE_FILE_PATH + imageFileName })
       .then((response) => {
